@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'Spam/Css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Spam/Css/Style.css' %}">
+    <link rel="stylesheet" href="{% static 'Spam/Css/radio.css' %}">
+    <title>Document</title>
+</head>
+<style>
+body {
+  background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/disp/2bbf3a52005319.5901123c114f4.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+<body bgcolor="#000000">
+    <!-- Main Section Start -->
+    <section>
+        <!-- Header part start -->
+        <header>
+            <nav>
+                <div><a href="#" class="brand">SPD</a></div>
+                <ul>
+                    <li><a href="#" class="active">Web App</a></li>
+                    <li><a href="#">Web Api</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header part end -->
+
+        <!-- Main Content part start -->
+        <div class="fluid-container content">
+            <div class="row m-auto">
+                <!-- Left side Text part start -->
+                <div class="col-md-6 p-5 m-auto typo-content" >
+                    <h1>
+                        welcome to spd
+                    </h1>
+                    <h5>[spam message detection]</h2>
+                        <p style="color: #fb0808;">
+                           Hi Honey ! Protect your Money !                       </p>
+                        <p style="color: #f10615;">
+                            Enter your spam message here !, Watch it disappear !, Never fear !,Our filters work here !, Shift and clear !, keeping your inbox safe all year !
+                        </p>
+                        <p style="color: #fb0824;">
+                            After proccessing you will see
+                            result.
+                        </p>
+                </div>
+                <!-- Left side Text part end -->
+
+                <!-- Form part start -->
+                <div class="col-md-6 p-5 m-auto form-content">
+                    <form method="post"action = "check" class="main-form">
+                        {% csrf_token %}
+                        <textarea name="rawdata" placeholder="Enter Your Text Here..." id="rawdata"></textarea><br>
+                        <div class="algo-choice" id="cb">
+                            <label class="radiocontainer" style="color: rgb(255, 47, 161);">Algo - 1
+                                <input type="radio" name="algo" value = "Algo-1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer" style="color: rgb(255, 47, 161);">Algo - 2
+                                <input type="radio" name="algo" value = "Algo-2">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radiocontainer" style="color: rgb(255, 47, 161);">Algo - 3
+                                <input type="radio" name="algo" value = "Algo-3">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="check-holder">
+                            <button type="submit" class="check-btn">Check</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Form part end -->
+            </div>
+            <!-- Footer start -->
+            <div class="footer">
+                <p>.` &copy; . <b> .</b></p>
+            </div>
+            <!-- Footer end -->
+        </div>
+        <!-- Main Content part end -->
+    </section>
+    <!-- Main Section End -->
+    <script src="./Js/JQuery.js"></script>
+    <script src="./Js/Bootstrap.min.js"></script>
+    <script src="./Js/Main.js"></script>
+</body>
+
+</html>
